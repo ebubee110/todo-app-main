@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+:root {
+    /* Light Theme */
+
+    --Gray-50: hsl(0, 0%, 98%);
+    --Purple-300: hsl(234, 39%, 85%);
+    --Gray-300: hsl(233, 11%, 84%);
+    --Gray-600: hsl(236, 9%, 61%);
+    --Navy-850: hsl(235, 19%, 35%);
+
+    /* Dark Theme */
+
+    --Navy-950: hsl(235, 21%, 11%);
+    --Navy-900: hsl(235, 24%, 19%);
+    --Purple-300: hsl(234, 39%, 85%);
+    --Purple-100-hover: hsl(236, 33%, 92%);
+    --Purple-600: hsl(235, 16%, 43%);
+    --Purple-700: hsl(233, 14%, 35%);
+    --Purple-800: hsl(237, 14%, 26%);
+    --Gray-600: hsl(236, 9%, 61%);
+
+    /* gradiant */
+
+    --light-blue: hsl(192, 100%, 67%);
+    --purple: hsl(280, 87%, 65%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: url('./images/bg-mobile-light.jpg'); */
+    background-color: var(--Navy-900);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.input-container {
+    background: white;
+    width: 23rem;
+    height: 3rem;
+}
+
+.input-container input {
+    background: transparent;
+    width: 20rem;
+    border: none; /* Removes the border */
+    outline: none;
+}
+
+input::placeholder {
+    border: none;
+    color: var(--Gray-600);
+}
+
+input::after {
+    border: none;
+}
+
+ul {
+    background: white;
+    width: 23rem;
+    height: fit-content;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid var(--Gray-600) 1px;
+    cursor: pointer;
+}
+
+li.dragging {
+    opacity: 0.5;
+    background: #d0e6ff;
+}
+
+.drag {
+    justify-content: space-between;
+    align-items: center;
+}
+.status {
+    width: 23rem;
+    height: 2.5rem;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: bold;
+    color: var(--Gray-600);
+}
+
+.hidden {
+    display: hidden;
+}
+
+#hidden {
+    display: hidden;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.complete-btn:hover {
+    border: solid var(--light-blue) 1px;
+}
+
+.gradiant {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    opacity: 1;
+}
+
+.todo-text {
+    font-size: medium;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--Navy-850);
+}
+
+.items-left {
+    color: var(--Gray-600);
+    font-weight: 500;
+}
+
+#all-btn:focus {
+    color: var(--light-blue);
+}
+
+#active-btn:focus {
+    color: var(--light-blue);
+}
+
+#completed-btn:focus {
+    color: var(--light-blue);
+}
+
+#all-btn:hover {
+    color: var(--Navy-850);
+}
+
+#active-btn:hover {
+    color: var(--Navy-850);
+}
+
+#completed-btn:hover {
+    color: var(--Navy-850);
+}
+
+.test {
+    background-image: url(./images/bg-mobile-dark.jpg);
+    color: var(--Purple-300);
+}

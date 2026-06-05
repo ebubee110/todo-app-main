@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png" />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            // Enable Tailwind dark mode class strategy
+            tailwind.config = { darkMode: 'class' };
+        </script>
+
+        <title>Frontend Mentor | Todo app</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 0.6875rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-[url('./images/bg-mobile-light.jpg')] bg-[var(--Gray-50)] dark:bg-[var(--Navy-950)] dark:bg-[url('./images/bg-mobile-dark.jpg')]">
+        <div class="flex justify-center items-center p-5 gap-56">
+            <h1 class="uppercase text-2xl text-white font-bold">t o d o</h1>
+            <button id="theme-toggle">
+                <img src="./images/icon-sun.svg" alt="sun icon" />
+            </button>
+        </div>
+        <main class="flex flex-col items-center justify-center">
+            <div
+                class="input-container flex justify-start items-center gap-3.5 rounded px-3.5 dark:bg-[var(--Navy-900)]">
+                <button
+                    type="button"
+                    id="add-task-btn"
+                    class="w-5 h-5 rounded-full border"></button>
+                <input
+                    class="text-[var(--Purple-300)]"
+                    type="text"
+                    id="todo-input"
+                    placeholder="Create a new Todo.." />
+            </div>
+
+            <div
+                class="dark:bg-[var(--Navy-900)] mt-4 py-2.5 shadow-lg rounded rounded-t">
+                <ul id="todo-list" class="dark:bg-[var(--Navy-900)]"></ul>
+                <div
+                    class="text-sm flex justify-between items-center py-2.5 px-4 items-left">
+                    <p id="items-left"></p>
+
+                    <button id="clear-completed">Clear Completed</button>
+                </div>
+            </div>
+
+            <div
+                class="status bg-white py-2.5 px-2.5 mt-4 rounded shadow-lg dark:bg-[var(--Navy-900)]">
+                <button id="all-btn">All</button
+                ><button id="active-btn">Active</button
+                ><button id="completed-btn">Completed</button>
+            </div>
+
+            <p class="mt-12 text-gray-600">Drag and drop to reorder list</p>
+        </main>
+
+        <footer class="attribution text-black mt-11 dark:text-white">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                class="text-black dark:text-white"
+                >Frontend Mentor</a
+            >. Coded by
+            <a
+                class="font-bold"
+                href="https://www.linkedin.com/in/god-swill-ebube-ojiaku-301666318/"
+                >God'swill Ebube Ojiaku</a
+            >.
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
