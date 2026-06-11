@@ -129,7 +129,7 @@ li.completed {
     color: var(--Gray-600);
     font-weight: 500;
 }
-
+/* 
 #all-btn:focus {
     color: var(--light-blue);
 }
@@ -152,9 +152,76 @@ li.completed {
 
 #completed-btn:hover {
     color: var(--Navy-850);
-}
+} */
 
 .test {
     background-image: url(./images/bg-mobile-dark.jpg);
-    color: var(--Purple-300);
+    color: var(--Purple-100-hover);
+}
+
+@media (max-width: 390px) {
+    ul {
+        width: 20rem;
+    }
+
+    .input-container {
+        width: 20rem;
+    }
+
+    .enter {
+        width: 16px;
+        height: 16px;
+    }
+
+    .status {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 320px) {
+    ul {
+        width: 16rem;
+    }
+
+    .input-container {
+        width: 16rem;
+    }
+
+    .enter {
+        width: 15px;
+        height: 15px;
+    }
+
+    .status {
+        width: 16rem;
+    }
+}
+
+@media (max-width: 162px) {
+    ul {
+        width: 10rem;
+    }
+
+    .input-container {
+        width: 10rem;
+    }
+
+    .enter {
+        width: 15px;
+        height: 15px;
+    }
+
+    .status {
+        width: 10rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-image: url(./images/bg-desktop-light.jpg);
+    }
+
+    dark {
+        background-image: url(./images/bg-desktop-dark.jpg);
+    }
 }

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // const completedBtn = li.querySelector('.complete-btn');
 
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    console.log(tasks);
+    // console.log(tasks);
 
     // const itemsLeft = tasks.filter((todo) => !todo.completed).length;
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addTaskButton.addEventListener('click', () => {
         const taskText = todoInput.value.trim();
-        console.log(taskText);
+        // console.log(taskText);
         if (taskText === '') return;
 
         const newTask = {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         saveTasks();
         renderTask(newTask);
         todoInput.value = '';
-        console.log(tasks);
+        // console.log(tasks);
     });
 
     const itemsLeftElement = document.getElementById('items-left');
@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
             saveTasks(); //update Local
             li.remove(); //remove from the page
         });
-        console.log(tasks);
-        console.log(deleteBtn);
+        // console.log(tasks);
+        // console.log(deleteBtn);
 
         const completedBtn = li.querySelector('.complete-btn');
         const checkMark = completedBtn.querySelector('div');

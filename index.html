@@ -28,8 +28,9 @@
         </style>
     </head>
     <body
-        class="bg-[url('./images/bg-mobile-light.jpg')] bg-[var(--Gray-50)] dark:bg-[var(--Navy-950)] dark:bg-[url('./images/bg-mobile-dark.jpg')]">
-        <div class="flex justify-center items-center p-5 gap-56">
+        class="bg-[url('./images/bg-mobile-light.jpg')] bg-[var(--Gray-50)] lg:bg-[url(./images/bg-desktop-light.jpg)] dark:bg-[var(--Navy-950)] dark:bg-[url('./images/bg-mobile-dark.jpg')] dark:lg:bg-[url(./images/bg-desktop-dark.jpg)]">
+        <div
+            class="flex justify-between items-center p-5 lg:justify-center lg:gap-56">
             <h1 class="uppercase text-2xl text-white font-bold">t o d o</h1>
             <button id="theme-toggle">
                 <img src="./images/icon-sun.svg" alt="sun icon" />
@@ -41,7 +42,7 @@
                 <button
                     type="button"
                     id="add-task-btn"
-                    class="w-5 h-5 rounded-full border"></button>
+                    class="enter w-5 h-5 rounded-full border"></button>
                 <input
                     class="text-[var(--Purple-300)]"
                     type="text"
@@ -50,8 +51,10 @@
             </div>
 
             <div
-                class="dark:bg-[var(--Navy-900)] mt-4 py-2.5 shadow-lg rounded rounded-t">
-                <ul id="todo-list" class="dark:bg-[var(--Navy-900)]"></ul>
+                class="dark:bg-[var(--Navy-900)] mt-4 py-2.5 shadow-lg rounded">
+                <ul
+                    id="todo-list"
+                    class="dark:bg-[var(--Navy-900)] rounded-t"></ul>
                 <div
                     class="text-sm flex justify-between items-center py-2.5 px-4 items-left">
                     <p id="items-left"></p>
@@ -62,9 +65,19 @@
 
             <div
                 class="status bg-white py-2.5 px-2.5 mt-4 rounded shadow-lg dark:bg-[var(--Navy-900)]">
-                <button id="all-btn">All</button
-                ><button id="active-btn">Active</button
-                ><button id="completed-btn">Completed</button>
+                <button
+                    id="all-btn"
+                    class="focus:text-[var(--light-blue)] hover:text-[var(--Navy-850)] dark:hover:text-[var(--Purple-100-hover)]">
+                    All</button
+                ><button
+                    id="active-btn"
+                    class="focus:text-[var(--light-blue)] hover:text-[var(--Navy-850)] dark:hover:text-[var(--Purple-100-hover)]">
+                    Active</button
+                ><button
+                    id="completed-btn"
+                    class="focus:text-[var(--light-blue)] hover:text-[var(--Navy-850)] dark:hover:text-[var(--Purple-100-hover)]">
+                    Completed
+                </button>
             </div>
 
             <p class="mt-12 text-gray-600">Drag and drop to reorder list</p>
@@ -75,7 +88,7 @@
             <a
                 href="https://www.frontendmentor.io?ref=challenge"
                 class="text-black dark:text-white"
-                >Frontend Mentor</a
+                >Frontend Mentor </a
             >. Coded by
             <a
                 class="font-bold"
